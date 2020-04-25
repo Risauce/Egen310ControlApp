@@ -15,6 +15,7 @@ This project contains the source code and documentation required to operate a re
 
 ### Source Code:
 
-- The most up to date code can be found here: 
+- The most up to date code can be found here: [Stable Code](https://github.com/Risauce/Egen310ControlApp)
 
-- The source code for our development can be found here: 
+- The source code for our development can be found here: [Development Code](https://github.com/Risauce/Egen310ControlApp)
+
