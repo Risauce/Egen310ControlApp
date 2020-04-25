@@ -84,72 +84,15 @@ void setup()
   delay(10);
 }
 
-
+// Here is where all the magic happens. This loop() function runs constantly within the Uno, constantly taking commands from the bluetooth serial code. 
+// The commands themselves are self-explanatory. For example; when the command for forward is recieved, it commands both motors to move the vehicle forward.
+// L and R commands are different at the moment. They control the servos to turn the vehicle, but this will be changed. 
 void loop()
 {
   if (Serial.available() > 0) //As long as there is a connection to BT
   {
     btCmd = Serial.read(); //Read the current command,
-    //digitalWrite(led, 1); //Turn on the light and do follow one of the following commands:
-    /*------------------------------------------------------------------------------*/
-
-    /*
-      if(btCmd == 'F')        //move forwards
-      {
-      digitalWrite(outPin1,HIGH);
-      digitalWrite(outPin2,LOW);
-      digitalWrite(outPin3,HIGH);
-      digitalWrite(outPin4,LOW);
-      }
-      else if (btCmd == 'B')       //move backwards
-      {
-      digitalWrite(outPin1,LOW);
-      digitalWrite(outPin2,HIGH);
-      digitalWrite(outPin3,LOW);
-      digitalWrite(outPin4,HIGH);
-      }
-      else if (btCmd == 'S')     //stop!!
-      {
-      digitalWrite(outPin1,LOW);
-      digitalWrite(outPin2,LOW);
-      digitalWrite(outPin3,LOW);
-      digitalWrite(outPin4,LOW);
-      }
-      else if (btCmd == 'R')    //right
-      {
-      digitalWrite(outPin1,HIGH);
-      digitalWrite(outPin2,LOW);
-      digitalWrite(outPin3,LOW);
-      digitalWrite(outPin4,LOW);
-      }
-      else if (btCmd == 'L')     //left
-      {
-      digitalWrite(outPin1,LOW);
-      digitalWrite(outPin2,LOW);
-      digitalWrite(outPin3,HIGH);
-      digitalWrite(outPin4,LOW);
-      }
-      else if (btCmd == 'I')    //forward right
-      {
-      digitalWrite(outPin1,HIGH);
-      digitalWrite(outPin2,LOW);
-      digitalWrite(outPin3,LOW);
-      digitalWrite(outPin4,HIGH);
-      }
-      else if (btCmd == 'G')    //forward left
-      {
-      digitalWrite(outPin1,LOW);
-      digitalWrite(outPin2,HIGH);
-      digitalWrite(outPin3,HIGH);
-      digitalWrite(outPin4,LOW);
-      }
-    */
-    //servoPos++;
-
-    //servo1.write(servoPos);
-
-    ///delay(1);
-    //servo2.write(servoPos);
+    
 
     switch (btCmd) {
       case 'F': //Moving Forward ASCII: 70
@@ -180,7 +123,7 @@ void loop()
 
 
 
-        pwm.writeMicroseconds(servonum, 1000); 
+        pwm.writeMicroseconds(servonum, 1000);  //The writeMicroseconds function writes to the pwm a certain arc to follow. 
         pwm.writeMicroseconds(1, 1000);
 
         //servo1.write(90);
@@ -204,7 +147,7 @@ void loop()
 
 
 
-        //servo1.write(-90);
+        //servo1.write(-90); //The standard way to write to servos without PWM control
         //servo2.write(-90);
         break;
       case 'I': //Moving forward and Right
