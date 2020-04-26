@@ -24,6 +24,8 @@ This project contains the source code and documentation required to operate a re
 
 UML Diagram: ![UML Diagram of the Prototypes](Images/class-diagram.png)
 
+This UML diagram represents the structure of the Control App. The screen class represents the running program that the user interacts with. It is composed of sliders (speed), buttons (like forward, backward), and a list picker (for bluetooth lists). The app itself utilizes a bluetooth client to connect to a bluetooth device, and an internal timer to keep track of time and access some elements of continuity.
+
 ## Bugs Reporting
 
 - How to access bug lists: To report a bug navigate to the *issues* section of the Github repo and create a new issue. Make sure to properly name the bug and describe exactly your issue before creating the issue.
