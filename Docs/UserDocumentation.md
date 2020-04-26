@@ -27,9 +27,9 @@ Thankfully you don't have to worry about directly using the Arduino code, the An
 
 - The password is usually 1234 to connect, but can be 0000.
 
-Clicking on the *bluetooth connector* will promp you to connect to already paired bluetooth devices, and once your android mobile device is connected to the vehicle, it will bring you back to this UI page and the *Disconnected* will change to a *Connected*.
+Clicking on the *bluetooth connector* will prompt you to connect to already paired bluetooth devices, and once your android mobile device is connected to the vehicle, it will bring you back to this UI page and the *Disconnected* will change to a *Connected*.
 
-From here you can begin to use the different parts of the app, controlling the vehicle in the process! The sliding bar to the right of the connected determines the vehicle's speed, in by how much power is sent to the motors on your command.
+From here you can begin to use the different parts of the app, controlling the vehicle in the process! The sliding bar to the right of the *Connected* determines the vehicle's speed, in by how much power is sent to the motors on your command.
 
 ## Program Iterations
 
@@ -43,7 +43,7 @@ Most of the work in prototype 1 was focused on creating the Arduino code that wo
 
 Prototype 2 works out a few of the strange UI kinks that prototype 1 had. It cleans up a few things while adding a simple and visually interesting background. It also contains the speed slider implementation that allows the user to control the vehicle's speed.
 
-Prototype 2's general focus was on improving the capabilities that prototype 1 had instantiated. In general I wante to keep the same slick and simple feel that the first prototype had, while adding in some needed visuals.
+Prototype 2's general focus was on improving the capabilities that prototype 1 had instantiated. In general I wanted to keep the same slick and simple feel that the first prototype had, while adding in some needed visuals.
 
 ## Report a Bug
 
